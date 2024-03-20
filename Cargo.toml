@@ -1,0 +1,31 @@
+[package]
+name = "tiny_blockchain"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name="full_node"
+path="src/bin/full_node.rs"
+
+[[bin]]
+name="miner_node"
+path="src/bin/miner_node/main.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-std = "1.12.0"
+chrono = "0.4.31"
+clap = "4.5.0"
+ed25519-dalek = "2.0.0"
+ethnum = "1.4.0"
+futures = "0.3.30"
+hex = "0.4.3"
+libp2p = "0.53.2"
+num = "0.4.1"
+ring = "0.17.5"
+serde = { version = "1.0.196", features = ["derive"] }
+serde_json = "1.0.113"
+sha2 = "0.10.8"
+signature = "2.1.0"
+tracing = "0.1.40"
